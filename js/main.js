@@ -358,7 +358,7 @@ const displayMessage = {
     },
     failure: () => {
         message.classList.add("alert-danger");
-        message.textContent = "Sorry! Try agian";
+        message.textContent = "Sorry! Try Again";
     }  
 }
 
