@@ -1,0 +1,120 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.heading{
+    background: linear-gradient(90deg,  rgb(209, 2, 246), rgb(86, 6, 214) ) ;
+}
+
+.levelsBtnSection{
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 1px 2px 0px #666;
+}
+.levelBtn{
+    border: none;
+    width: 120px;
+    padding: 10px 0px;
+    transition: all .5s;
+    
+}
+.moreLevelsBtn{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+.moreLevels{
+    width: 180px;
+    border: none;
+    padding: 10px 0px;
+    transition: all .5s;
+}
+.active{
+    background-color: #19195d;
+    color: #fff;
+}
+.levelActive{
+    background: linear-gradient(90deg,   rgb(86, 6, 200), rgb(209, 2, 246) ) ;
+    color: #fff;
+}
+.mainContent{
+    background: linear-gradient(90deg,  rgba(10, 136, 240, 0.452), rgba(214, 6, 214, 0.4)), url("../images/bgImg2.jpeg") no-repeat;
+}
+.gameSection{
+    box-shadow: 1px 1px 2px 1px #666;
+    width: 80%;
+}
+.submitButton{
+    width: 90%;
+    margin: auto;
+    background: grey;
+    border-radius: 5px;
+}
+.boxes, .sideResField, .bottomResField{
+    border: none;
+    box-shadow: 1px 1px 1px 1px #666;
+    border-radius: 5px; 
+
+}
+.instructionSection{
+    box-shadow: 1px 1px 2px 1px #666;
+    width: 80%;
+}
+
+#sb{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+
+
+
+#sb input{
+    height: 50px;;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin: 2%;
+    font-size: 1.5rem;
+}
+.displaySign{
+    font-size: 1.5rem;;
+}
+
+.sideResField{
+    background-color: blueviolet;
+    color: #fff;
+}
+.bottomResField{
+    background-color: orangered;
+    color: #fff;
+}
+
+footer{
+    background: linear-gradient(90deg,  rgb(209, 2, 246), rgb(86, 6, 214) ) ;
+}
+
+@media(max-width: 550px){
+    header h2{
+        font-size: 24px;
+    }
+    header h4{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 490px){
+    .gameSection{
+        width: 100%;
+    }
+    .instructionSection{
+        width: 100%;
+    }
+    .sideResField{
+    }
+    #sb{
+        width: 100%;
+    }
+}

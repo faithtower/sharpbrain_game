@@ -1,0 +1,156 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.section{
+    padding: 20px;
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    box-shadow: 2px 2px 2px 2px #666;
+}
+.getStarted{
+    background: linear-gradient(90deg, rgba(6, 109, 243, 0.8), rgba(97, 3, 247, 0.8));
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.getStartedContent{
+    width: 100%;
+}
+.icon{
+    width: 30%;
+    margin: auto;
+    border-radius: 50%;
+}
+.icon img{
+    border-radius: 50%;
+    transition: all .5s;
+}
+.icon img:hover, .startBtn:hover{
+    box-shadow: 2px 2px 2px 2px rgb(43, 37, 37);
+    transform: translateY(-3%)
+}
+#startBtn{
+    width: 30%;
+    border-radius: 50px;
+    border: 2px solid #ddd;
+    padding: 5px;
+    margin: auto;
+    box-shadow: 2px 2px 2px 2px #666;
+}
+.startBtn{
+    width: 100%;
+    border:none;
+    border-radius: 50px;
+    height: 40px;
+    background:linear-gradient(90deg, rgb(86, 6, 214), rgb(209, 2, 246)) ;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all .5s;
+    outline: none;
+}
+.startBtn:hover{
+    background: linear-gradient(90deg,  rgb(209, 2, 246), rgb(86, 6, 214) ) ;
+    box-shadow: 2px 2px 2px 2px rgb(43, 37, 37);
+    transform: translateY(-3%)
+}
+
+.aboutMe{
+    width: 30%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    color: #666;
+}
+#caption{
+    border-radius: 50%;
+}
+
+.dT1{
+    color: rgb(246, 226, 41);
+}
+.myPic{
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 2px #666;
+    text-align: center;
+    display: flex;
+}
+.arr{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.myPic img{
+    border-radius: 50%;
+}
+footer{
+    background: linear-gradient(90deg, rgba(6, 109, 243, 0.8), rgba(97, 3, 247, 0.8));
+}
+
+@media(max-width: 940px){
+    #startBtn{
+        width: 50%;
+    }
+    .getStarted h1{
+        font-size: 26px;
+    }
+    .aboutMe h3{
+        font-size: 18px;
+    }
+    .aboutMe{
+        margin: auto; 
+    }
+}
+@media(max-width: 900px){
+    .section{
+        display: block;
+        margin: 30px auto;
+    }
+    .getStarted{
+        width: 90%;
+        margin: auto;
+    }
+    .aboutMe{
+        width: 50%;
+        margin: auto; 
+    }
+    
+
+    #startBtn{
+        width: 60%;
+    }
+    .getStarted h1{
+        font-size: 24px;
+    }
+    .getStarted h3{
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+@media(max-width: 756px){
+    .getStarted{
+        width: 90%;
+        margin: auto;
+    }
+    .aboutMe{
+        width: 80%;
+        margin: auto; 
+    }
+    #startBtn{
+        width: 90%;
+    }
+    .getStarted h1{
+        font-size: 18px;
+    }
+    .getStarted h3{
+        font-size: 14px;
+        font-weight: normal;
+    }
+}

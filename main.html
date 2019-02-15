@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sharp Brain 2 | Beta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="./stylesheet/bootstrap.min.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./stylesheet/main.css" />
+</head>
+<body>
+    <header class="heading p-3 text-light text-center d-flex">
+            <div>
+                <img src="./images/unnamed.png" width="100px" class="img-thumbnail rounded" alt="">
+            </div>
+            <div class="text-left ml-3">
+                <h2>SHARP BRAIN GAME</h2>
+                <h4>Test your critical Thinking Level</h4>
+            </div>
+            
+    </header>
+
+    <div class="levelsBtnSection bg-white">
+        <div><button id="beginnerBtn" class="border-right levelBtn">Beginner</button></div>
+        <div><button id="intermediateBtn" class=" border-right levelBtn">Intermediate</button></div>
+        <div><button id="advanceBtn" class="levelBtn">Advance</button></div>
+    </div>
+    <div class="moreLevelsBtn">
+        <div><button id="bLevel1" class="moreLevels border-right">Level 1</button></div>
+        <div><button id="bLevel2" class="moreLevels">Level 2</button></div>
+        <div><button id="iLevel1" class="moreLevels border-right">Level 1</button></div>
+        <div><button id="iLevel2" class="moreLevels">Level 2</button></div>
+        <div><button id="aLevel1" class="moreLevels border-right">Level 1</button></div>
+        <div><button id="aLevel2" class="moreLevels">Level 2</button></div>
+    </div>
+    <div class="my-3 text-center text-danger d-flex justify-content-around p-2 bg-light">
+        <div class="w-50 p-2">Scores: <span id="record" class="bg-secondary text-light rounded py-2 px-4"></span></div>
+        <div class="text-center w-50">
+            <button id="shuffleBtn" class="btn w-75 btn-info py-2"><i class="fas fa-random"></i> Shuffle</button>
+        </div>
+    </div>  
+
+    <div class="mainContent">
+        <div class="row mx-auto justify-content-around"> <!-- Row-->
+            <div class="col-lg-6 bg-light p-3 m-2 gameSection text-center">
+
+                <div id="message"></div>
+                <table id="sb">
+                    <tr>
+                        <td><input type="number" id="box1" class="boxes" value=""></td>
+                        <td><span id="sign1" class="displaySign">sign1</span></td>
+                        <td><input type="number" id="box2" class="boxes" value=""></td>
+                        <td><span id="sign5" class="displaySign">sign2</span></td>
+                        <td><input type="number" id="box5" class="boxes" value=""></td>
+                        <td><span id="equals1">=</span></td>
+                        <td><input type="number" id="res1" value="1000" class="sideResField" disabled></td>
+                    </tr>
+
+                    <tr>
+                        <td><span id="sign2" class="displaySign">sign 3</span></td>
+                        <td></td>
+                        <td><span id="sign3" class="displaySign">sign 4</span></td>
+                        <td></td>
+                        <td><span id="sign6" class="displaySign">sign5</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="number" id="box3" class="boxes" value=""></td>
+                        <td><span id="sign4" class="displaySign">sign6</span></td>
+                        <td><input type="number" id="box4" class="boxes" value=""></td>
+                        <td><span id="sign7" class="displaySign">sign7</span></td>
+                        <td><input type="number" id="box6" class="boxes" value=""></td>
+                        <td><span id="equals2">=</span></td>
+                        <td><input type="number" id="res2" value="1000" class="sideResField" disabled></td>
+                    </tr>
+
+                    <tr>
+                        <td><span id="sign8" class="displaySign">sign8</span></td>
+                        <td></td>
+                        <td><span id="sign9" class="displaySign">sign 9</span></td>
+                        <td></td>
+                        <td><span id="sign10" class="displaySign">sign10</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="number" id="box7" class="boxes" value=""></td>
+                        <td><span id="sign11" class="displaySign">sign11</span></td>
+                        <td><input type="number" id="box8" class="boxes" value=""></td>
+                        <td><span id="sign12" class="displaySign">sign12</span></td>
+                        <td><input type="number" id="box9" class="boxes" value=""></td>
+                        <td><span id="equals6">=</span></td>
+                        <td><input type="number" id="res6" value="" class="sideResField" disabled></td>
+                    </tr>
+
+                    <tr>
+                        <td><span id="equals3">||</span></td>
+                        <td></td>
+                        <td><span id="equals4">||</span></td>
+                        <td></td>
+                        <td><span id="equals5">||</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="number" id="res3" value="1000" class="bottomResField" disabled></td>
+                        <td></td>
+                        <td><input type="number" id="res4" value="1000" class="bottomResField" disabled></td>
+                        <td></td>
+                        <td><input type="number" id="res5" value="5" class="bottomResField" disabled></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <div class="submitButton"><button id="submitBtn" class="btn btn-primary btn-block px-5 my-3 text-center">Submit</button></div>
+            </div>
+
+            <div class="instructionSection bg-white col-lg-5 m-2 p-2">
+        
+                <div class="instructions p-3">
+                    <p class="text-danger text-center"> Documentation</p>
+                    The Game consist of Three Levels <span class="font-weight-bold">Beginner, Intermediate and Advance.</span> 
+                    Each level contains two extra Levels <span class="text-primary">Level 1 & Level 2</span>
+                    <br>
+                    <p class="bg-light p-1">
+                        <p class=""><span class="text-light bg-primary rounded p-1">Beginner</span> gives you four Boxes.</p> 
+                        <span class="text-light bg-dark rounded p-1">Level 1</span> gives you two(2) empty boxes to fill.
+                        <br> <span class="text-light bg-dark rounded p-1">Level 2</span> gives you three(3) empty boxes to fill.
+                    </p>
+                    <p class="bg-light p-1">
+                        <p class=""><span class="text-light bg-primary rounded p-1">Intermediate</span> gives you Six Boxes.</p> 
+                        <span class="text-light bg-dark rounded p-1">Level 1</span> gives you three(3) empty boxes to fill.
+                        <br> <span class="text-light bg-dark rounded p-1">Level 2</span> gives you four(4) empty boxes to fill.
+                    </p>
+                    <p class="bg-light p-1">
+                        <p class=""><span class="text-light bg-primary rounded p-1">Advance</span> gives you Nine(9) Boxes.</p> 
+                        <span class="text-light bg-dark rounded p-1">Level 1</span> gives you four(4) empty boxes to fill.
+                        <br> <span class="text-light bg-dark rounded p-1">Level 2</span> gives you five(5) empty boxes to fill.
+                    </p>
+                    <div>
+                        <p class="text-light bg-info rounded text-center">Use BODMAS rule</p>
+                        Take note of the signs between the pair of boxes
+                    </div>
+                    <div class="border shadow my-3 p-2">
+                            <p><span class="text-danger h3"> + </span> Addition<br>
+                                <span class="text-danger h4"> x </span> Multiplication <br>
+                                <span class="text-danger h3"> - </span> Subtraction 
+                            </p>
+                            <p><span>EXAMPLE:</span> <span class="text-light bg-dark rounded text-center p-2">2 + 4 x 3</span> 
+                                You would evaluate <span class="text-light bg-dark rounded text-center p-1">4 x 3</span> first <br>
+                                and then add the results <span class="text-light bg-dark rounded text-center p-1">2</span>
+                            </p>
+                            <p><span>EXAMPLE:</span> <span class="text-light bg-dark rounded text-center p-2">8 - 5 + 3</span> 
+                                You would evaluate <span class="text-light bg-dark rounded text-center p-1">5 + 3</span> first <br>
+                                and then subtract the results from<span class="text-light bg-dark rounded text-center p-1">8</span>
+                            </p>
+                        <span class="text-primary">Submit</span> your results when you are sure of your answer
+                    </div>
+                    <p class="border my-3"></p>
+                    <p class="text-danger">* Please note that scores are not saved and will reset when you go to a different Level at all times</p>
+                    <p>You can Reshuffle the numbers by Clicking on the <span class="text-success">Shuffle Button</span></p>
+                </div>
+            </div>
+        </div> <!-- End of row-->
+
+    </div> <!-- End of Main Content-->
+
+    <footer class="mt-5 p-4 text-center text-light">
+        Created with <i class="fas fa-heart text-danger"></i> by Shadrack Ankomahene
+        <p class="text-warning">This Game is Dedicated to my Little Sister | Mary Dede Ankomahene</p>
+        <p>Copyright&copy;2019 | Faithtower Media</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
